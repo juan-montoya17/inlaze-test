@@ -40,4 +40,10 @@ export class RolesController {
   async delete(@Param('id') id: string) {
     return await this.rolesService.delete(id);
   }
+
+  @Get()
+  @HttpCode(HttpStatus.OK)
+  async findAll() {
+    return await this.rolesService.findAll();
+  }
 }

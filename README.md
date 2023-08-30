@@ -1,19 +1,20 @@
-# NestJS Boilerplate
+# Inlaze Test
 
-NestJS Boilerplate for HTTP applications.
+Inlaze Test Microservice.
 
 We have the following endpoints:
 - `GET /api`
 - `GET /api/status`
 - `POST /api/auth/register`
 - `POST /api/auth/login`
-- `GET /api/auth/refresh`
-- `POST /api/users`
-- `GET /api/users`
-- `GET /api/users/myself`
 - `GET /api/users/:id`
 - `PUT /api/users/:id`
 - `DELETE /api/users/:id`
+- `POST /api/roles`
+- `GET /api/roles/:id`
+- `GET /api/roles`
+- `PUT /api/roles/:id`
+- `DELETE /api/roles/:id`
 
 ## Installation
 
@@ -28,7 +29,7 @@ If you don't have Node.js installed, you can install the latest version [here](h
 Clone the project
 
 ```bash
-$ git clone https://github.com/cdlavila/nestjs-boilerplate.git
+$ git clone https://github.com/juan-montoya17/inlaze-test.git
 ```
 
 #### Step 2
@@ -89,8 +90,6 @@ $ npm run start:debug
 If the tha app is running correctly, you can see the main route response in the browser, by clicking on the first link
 that appears in the terminal.
 
-Additionally, you can see the <a href="https://swagger.io">Swagger</a> documentation by clicking on the second link that
-appears in the terminal.
 
 ## Test Instructions
 
@@ -150,44 +149,4 @@ $ npm run lint
 ```bash
 # run linter and fix errors
 $ npm run lint:fix
-```
-
-```bash
-# generate a new module
-$ npm run module:generate --name=<module-name>
-```
-
-```bash
-# generate a new service
-$ npm run service:generate --module=<module-name> --name=<service-name>
-```
-
-```bash
-# generate a new controller
-$ npm run controller:generate --module=<module-name> --name=<controller-name>
-```
-
-```bash
-# generate a whole CRUD
-$ npm run crud:generate --name=<crud-name>
-```
-
-```bash
-# generate a new dto
-$ npm run dto:generate --module=<module-name> --name=<dto-name>
-```
-
-```bash
-# generate a new decorator
-$ npm run decorator:generate --module=<module-name> --name=<decorator-name>
-```
-
-```bash
-# generate a new guard
-$ npm run guard:generate --module=<module-name> --name=<guard-name>
-```
-
-```bash
-# generate a new filter
-$ npm run filter:generate --module=<module-name> --name=<filter-name>
 ```

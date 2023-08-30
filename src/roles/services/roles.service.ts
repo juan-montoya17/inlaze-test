@@ -33,6 +33,13 @@ export class RolesService {
     return role;
   }
 
+  async findAll(): Promise<Role[]> {
+    return await this.rolesRepository.find({
+      where: { isDeleted: false },
+      select: ['id', 'name', 'isDeleted', 'createdAt', 'updatedAt'],
+    });
+  }
+
   async update(id: string, data: UpdateRoleDto): Promise<Role> {
     const role = await this.rolesRepository.findOne({ where: { id } });
     if (!role) {
